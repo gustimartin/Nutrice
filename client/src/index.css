@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-200 text-gray-800 tracking-wide
+  }
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-bold
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+  button {
+    @apply shadow-lg shadow-gray-700 rounded-sm uppercase
+    bg-gray-200 text-gray-950
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.5s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.5s ease-in-out;
+}
