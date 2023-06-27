@@ -6,7 +6,7 @@ import Categories from "./components/categories/Categories";
 import ProductCard from "./components/products/ProductCard";
 function App() {
   return (
-    <Routes>
+    <Routes id="root">
       <Route path="/" element={<Hero />} />
       <Route path="/About" element={<ProductCard />} />
       <Route path="/contact" element={<Contact />} />

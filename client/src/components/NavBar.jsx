@@ -15,7 +15,7 @@ function NavBar() {
   // };
 
   return (
-    <div className=" w-full h-20 shadow-lg shadow-zinc-400  ">
+    <div className=" w-full h-20 shadow-lg shadow-zinc-400   ">
       <div className=" flex  items-center justify-between w-full h-full px-2 2xl:px-16 ">
         <Link to="/">
           <img className=" w-28 h-20 object-fill" src="./log.png" alt="logo" />
@@ -56,14 +56,14 @@ function NavBar() {
       <div
         className={
           nav
-            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-purple-900/80"
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-purple-900/80 "
             : ""
         }
       >
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[70%] sm:w-[60%] md:w-[45%] h-screen bg-gray-200 p-10 ease-in overl dark:bg-slate-800  duration-500 overflow-auto   "
+              ? " fixed left-0     z-[100] top-0 w-[70%] sm:w-[60%] md:w-[45%] h-screen bg-gray-200 p-10 ease-in overl dark:bg-slate-800  duration-500 overflow-auto   "
               : " fixed left-[-100%] top-0  p-10 ease-in duration-500"
           }
         >
