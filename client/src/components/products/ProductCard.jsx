@@ -1,4 +1,4 @@
-export default function ProductCard() {
+export default function ProductCard({ image, id, stock, name, price }) {
   return (
     <div>
       <div
@@ -7,22 +7,22 @@ export default function ProductCard() {
       >
         <img
           className="hover:scale-105 p-2 ease-in duration-500 rounded-t-sm h-52 object-cover w-full"
-          src="./banner.jpg"
+          src={image}
           alt="image"
         />
 
         <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold tracking-wide text-gray-900 dark:text-white">
-            {name}name
+            {name}
           </h5>
 
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {}
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
+            {price}
           </p>
-          <p>price</p>
-          <p>cantitad</p>
+
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {}
+          </p>
         </div>
       </div>
     </div>

@@ -4,9 +4,15 @@ export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3001",
-    // baseUrl: 'https://backendpf-production-b9df.up.railway.app/',
   }),
-  endpoints: (builder) => ({}),
+  endpoints: (builder) => ({
+    getAllProducts: builder.query({
+      query: () => "/products",
+    }),
+    getCategories: builder.query({
+      query: () => "/categories",
+    }),
+  }),
 });
 
-export const {} = productsApi;
+export const { useGetAllProductsQuery, useGetCategoriesQuery } = productsApi;

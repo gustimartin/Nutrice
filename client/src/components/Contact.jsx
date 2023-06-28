@@ -1,13 +1,13 @@
 function Contact() {
   return (
-    <div className="h-full md:h-screen w-full ">
+    <div className="h-full md:h-screen w-full  ">
       <img
         src="./bg.jpg"
         alt=""
         className=" w-full h-40   md:h-60 object-cover md:pt-6 pt-2 object-center"
       />
-      <div className=" grid md:grid-cols-2  justify-center items-center  p-4  md:px-4 ">
-        <div>
+      <div className=" grid md:grid-cols-2  justify-center items-center  p-4  md:p-8 ">
+        <div className="md:px-2">
           <h1 className=" first-letter:text-purple-800  text-zinc-800 px-4">
             Nutrice
           </h1>
