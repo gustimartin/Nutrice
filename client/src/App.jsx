@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Categories from "./components/categories/Categories";
 import ProductCard from "./components/products/ProductCard";
 import Products from "./components/products/Products";
+import Form from "./components/register/Form";
 function App() {
   return (
     <Routes id="root">
@@ -12,6 +13,7 @@ function App() {
       <Route path="/About" element={<Products />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/categories" element={<Categories />} />
+      <Route path="/login" element={<Form />} />
     </Routes>
   );
 }

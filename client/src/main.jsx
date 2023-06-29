@@ -8,9 +8,11 @@ import { productsApi } from "./features/productsApi";
 import NavBar from "./components/NavBar.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
+import user from "./features/authSlice.js";
 export const store = configureStore({
   reducer: {
     [productsApi.reducerPath]: productsApi.reducer,
+    user,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(productsApi.middleware),

@@ -5,7 +5,7 @@ import { LuMapPin } from "react-icons/lu";
 
 function Footer() {
   return (
-    <footer className="  bg-gray-900 text-gray-300 w-full">
+    <footer className="  bg-gray-900 text-gray-300 w-full ">
       <div className="container mx-auto border-t border-gray-600 md:py-4 py-2 flex flex-wrap justify-center">
         <div className="w-full sm:w-1/2  md:w-5/12 lg:w-1/3 md:p-4 p-2">
           <h3 className="text-xl font-semibold mb-2">Contacto</h3>
