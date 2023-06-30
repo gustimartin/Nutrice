@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 function Products() {
   const { data: prod, error } = useGetAllProductsQuery();
   return (
-    <div>
+    <div className=" grid md:grid-cols-4 gap-4 p-6">
       {prod?.length
         ? prod.map((el) => (
             <div key={el.id}>

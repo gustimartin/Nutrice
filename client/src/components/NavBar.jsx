@@ -1,18 +1,31 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
-// import { ImSearch } from "react-icons/im";
 import { IoMdClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import LoginForm from "./register/LoginForm";
+import RegisterForm from "./register/RegisterForm";
 function NavBar() {
   const [nav, setNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [regIsOpen, setRegIsOpen] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
-  // const [isExpanded, setExpanded] = useState(false);
 
-  // const toggleSearchBar = () => {
-  //   setExpanded(!isExpanded);
-  // };
+  const handleRegister = () => {
+    setRegIsOpen(!regIsOpen);
+    setIsOpen(false);
+  };
+  const handleLogin = () => {
+    setIsOpen(!isOpen);
+    setRegIsOpen(false);
+  };
+  const handleCloseLoginForm = () => {
+    setIsOpen(false);
+  };
+  const handleCloseRegisterForm = () => {
+    setRegIsOpen(false);
+  };
 
   return (
     <div className=" w-full h-20 shadow-lg shadow-zinc-400   ">
@@ -20,33 +33,37 @@ function NavBar() {
         <Link to="/">
           <img className=" w-28 h-20 object-fill" src="./log.png" alt="logo" />
         </Link>
-        {/* search bar */}
-        <div>
-          <ul className=" hidden md:flex ">
+        <div className=" hidden md:flex ">
+          <ul className=" hidden md:flex items-center">
             <Link to="/categories">
-              <li className="list-none hover:border-b-purple-800 uppercase ml-10 text-sm hover:border-b-2">
+              <li className="list-none hover:border-b-purple-800 uppercase ml-6 text-sm hover:border-b-2">
                 categorias
               </li>
             </Link>
             <Link to="/contact">
-              <li className="list-none  hover:border-b-2 uppercase ml-10 text-sm hover:border-purple-800">
+              <li className="list-none  hover:border-b-2 uppercase ml-6 text-sm hover:border-purple-800">
                 contacto
               </li>
             </Link>{" "}
             <Link to="/about">
-              <li className="list-none  hover:border-b-purple-800  uppercase text-sm ml-10 hover:border-b-2">
+              <li className="list-none  hover:border-b-purple-800  uppercase text-sm mx-6 hover:border-b-2">
                 About
               </li>
             </Link>
-            <Link to="/">
-              <li className="list-none  hover:border-b-purple-800  uppercase text-sm ml-10 hover:border-b-2">
-                ????
-              </li>{" "}
-            </Link>
-            <li className="list-none uppercase ml-10 text-sm">
-              <button className="  px-4 py-1 rounded-sm">login</button>
-            </li>
           </ul>
+          <div className=" hidden md:flex items-center  justify-center ">
+            <button
+              className="  px-4  py-1 rounded-sm"
+              onClick={handleRegister}
+            >
+              Registrarse
+            </button>
+            {regIsOpen && <RegisterForm onClose={handleCloseRegisterForm} />}
+            <button onClick={handleLogin} className="  px-4  py-1 rounded-sm">
+              ingresar
+            </button>
+            {isOpen && <LoginForm onClose={handleCloseLoginForm} />}
+          </div>
 
           <div onClick={handleNav} className=" md:hidden  text-purple-800">
             <GiHamburgerMenu size={25} />
@@ -63,7 +80,7 @@ function NavBar() {
         <div
           className={
             nav
-              ? " fixed left-0     z-[100] top-0 w-[70%] sm:w-[60%] md:w-[45%] h-screen bg-gray-200 p-10 ease-in overl dark:bg-slate-800  duration-500 overflow-auto   "
+              ? " fixed left-0     z-[100] top-0 w-[70%] sm:w-[60%] md:w-[45%] h-screen bg-gray-200 p-10 ease-in  dark:bg-slate-800  duration-500 overflow-auto   "
               : " fixed left-[-100%] top-0  p-10 ease-in duration-500"
           }
         >

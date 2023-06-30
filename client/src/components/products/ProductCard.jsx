@@ -2,7 +2,7 @@ export default function ProductCard({ image, id, stock, name, price }) {
   return (
     <div>
       <div
-        className=" max-w-sm hover:bg-white rounded-sm shadow-lg shadow-zinc-700 hover:scale-105 ease-in duration-300 
+        className=" max-w-sm hover:bg-white rounded-sm shadow-lg shadow-zinc-700     hover:scale-110 ease-in duration-300 
       hover:shadow-purple-800   "
       >
         <img
