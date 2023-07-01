@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginRequest } from "../../features/authSlice";
 function LoginForm({ onClose }) {
   const handleFormClose = () => {
-    onClose(); // Call the onClose callback to close the login form
+    onClose();
   };
   const dispatch = useDispatch();
   const {
@@ -26,7 +26,10 @@ function LoginForm({ onClose }) {
   };
 
   return (
-    <div className=" absolute bg-gray-200 top-20 right-0 lg:h-[100%] ease-in duration-500 overflow-auto ">
+    <div
+      id="login"
+      className=" absolute bg-gray-200 top-20 right-0 lg:h-[100%] ease-in duration-500 overflow-auto "
+    >
       <form
         onSubmit={handleSubmit(onSubmit)}
         className=" rounded-sm p-10 shadow-lg   w-full h-full    "

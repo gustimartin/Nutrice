@@ -9,6 +9,9 @@ import NavBar from "./components/NavBar.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
 import user from "./features/authSlice.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export const store = configureStore({
   reducer: {
     [productsApi.reducerPath]: productsApi.reducer,
@@ -21,6 +24,7 @@ export const store = configureStore({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ToastContainer />
       <Provider store={store}>
         <NavBar />
         <App />

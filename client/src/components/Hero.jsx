@@ -28,7 +28,7 @@ function Hero() {
           <h2 className="text-center text-gray-800 md:text-zinc-700 text-5xl p-1">
             Almacen Natural
           </h2>
-          <p className="p-6 text-xl first-letter:text-4xl text-zinc-600">
+          <p className="pt-6 px-6 text-xl first-letter:text-4xl text-zinc-600">
             Tu destino saludable de alimentos naturales y frescos. Descubre
             nuestra amplia selección de productos orgánicos, desde
             superalimentos hasta productos sin gluten. ¡Cuida tu cuerpo de
