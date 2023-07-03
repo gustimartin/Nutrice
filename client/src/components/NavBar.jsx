@@ -64,16 +64,15 @@ function NavBar() {
             </button>
             {isOpen && <LoginForm onClose={handleCloseLoginForm} />}
           </div>
-
-          <div onClick={handleNav} className=" md:hidden  text-purple-800">
-            <GiHamburgerMenu size={25} />
-          </div>
+        </div>
+        <div onClick={handleNav} className=" md:hidden  text-purple-800">
+          <GiHamburgerMenu size={25} />
         </div>
       </div>
       <div
         className={
           nav
-            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-purple-900/80 "
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-purple-900/80  "
             : ""
         }
       >

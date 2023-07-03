@@ -31,6 +31,12 @@ html {
   }
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  background-color: rgb(238, 238, 238);
+}
+
 @keyframes slide-in-left {
   0% {
     transform: translateX(-100%);

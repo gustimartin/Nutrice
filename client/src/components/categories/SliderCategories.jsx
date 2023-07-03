@@ -1,5 +1,4 @@
 import Slider from "react-slick";
-import CategoryCard from "./CategoryCard";
 import { useGetCategoriesQuery } from "../../features/productsApi";
 import SliderCard from "./SliderCard";
 
@@ -7,15 +6,17 @@ function SliderCategories() {
   const { data: categories } = useGetCategoriesQuery();
 
   const settings = {
-    dots: true,
+    dots: false,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 5000,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     focusOnSelect: true,
   };
   return (
-    <div className=" m-6  ">
+    <div className=" pt-80 md:pt-0 md:px-6 pb-4 px-6">
       <Slider {...settings}>
         {categories?.length
           ? categories.map((category) => (
