@@ -5,7 +5,7 @@ function SliderCard({ image, name }) {
     <div className="flex flex-col items-center bg-gray-200 border-2 border-gray-300 rounded-sm  max-h-sm  md:flex-row  md:max-w-lg md:max-h-72   ">
       <img
         className="object-cover w-full rounded-t-sm  md:h-auto md:w-48 md:rounded-sm md:rounded-l-sm h-48 "
-        src={image}
+        src={image.secure_url}
         alt=""
       />
       <div className="flex flex-col md:p-14 leading-normal p-4 w-full">
