@@ -7,7 +7,8 @@ const categorieSchema = new mongoose.Schema(
       required: true,
     },
     image: {
-      type: String,
+      public_id: String,
+      secure_url: String,
     },
   },
   {

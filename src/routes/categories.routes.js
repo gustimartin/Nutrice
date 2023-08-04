@@ -1,4 +1,6 @@
 import { Router } from "express";
+import fileUpload from "express-fileupload";
+
 import {
   getCategoryByName,
   getCategory,
@@ -10,7 +12,14 @@ const router = Router();
 
 router.get("/categories", getCategory);
 router.get("/category/:id", getCategoryByName);
-router.post("/category", createCategory);
+router.post(
+  "/category",
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "./uploadsCategory",
+  }),
+  createCategory
+);
 router.delete("/category/:id", deleteCategory);
 
 export default router;

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function SliderCard({ image, name }) {
   return (
     <div className="flex flex-col items-center bg-gray-200 border-2 border-gray-300 rounded-sm  max-h-sm  md:flex-row  md:max-w-lg md:max-h-72   ">
@@ -7,10 +9,12 @@ function SliderCard({ image, name }) {
         alt=""
       />
       <div className="flex flex-col md:p-14 leading-normal p-4 w-full">
-        <h5 className="mb-2 md:text-4xl text-2xl font-bold tracking-wide text-znc-800 ">
+        <h5 className="mb-2 md:text-3xl text-2xl font-bold tracking-wide text-znc-800 ">
           {name}
         </h5>
-        <button className=" py-1.5 px-4 ">Ver Mas</button>
+        <Link to={`/categories/${name.toLowerCase()}`}>
+          <button className=" py-1.5 px-4 ">Ver Mas</button>
+        </Link>
       </div>
     </div>
   );

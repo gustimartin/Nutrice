@@ -16,8 +16,12 @@ function SliderCategories() {
     focusOnSelect: true,
   };
   return (
-    <div className=" pt-80 md:pt-0 md:px-6 pb-4 px-6">
-      <Slider {...settings}>
+    <div className="pt-80 md:pt-0 md:px-6 pb-4 px-6  ">
+      <Slider
+        className="
+       "
+        {...settings}
+      >
         {categories?.length
           ? categories.map((category) => (
               <SliderCard

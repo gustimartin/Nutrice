@@ -7,16 +7,13 @@ export const createProductsSchema = z.object({
   description: z.string({
     required_error: "Description required",
   }),
-  price: z.number({
-    required_error: "must be a number",
-  }),
-  image: z.string({
-    required_error: "Image needed",
-  }),
-  stock: z.number({
-    required_error: "Stock required",
-  }),
-  category: z.array(z.string(), {
-    required_error: "Category needed",
-  }),
+  // price: z.number({
+  //   required_error: "must be a number",
+  // }),
+  // stock: z.number({
+  //   required_error: "Stock required",
+  // }),
+  // category: z.array(z.string(), {
+  //   required_error: "Category needed",
+  // }),
 });

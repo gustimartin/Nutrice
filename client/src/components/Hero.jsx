@@ -40,7 +40,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="relative h-24 md:hidden">
+      <div className="relative h-24 md:hidden z-[-1]">
         <div
           className="absolute  inset-0 bg-center bg-cover"
           style={{
@@ -49,7 +49,7 @@ function Hero() {
             zIndex: -1,
           }}
         ></div>
-        <div className="relative inset-0 flex flex-col justify-center z-[-1] ">
+        <div className="relative inset-0 flex flex-col justify-center ">
           <h1 className="p-1 first-letter:text-purple-800">Nutrice</h1>
           <h2 className="text-center text-gray-800">Almacen Natural</h2>
         </div>

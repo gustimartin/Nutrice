@@ -4,29 +4,41 @@ const productsSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      require: true,
     },
     category: {
       type: [String],
       ref: "Categories",
-      required: true,
     },
     description: {
       type: String,
-      required: true,
+      require: true,
+    },
+    nutrition: {
+      type: String,
+      require: true,
     },
     price: {
       type: Number,
+      require: true,
+    },
+    brand: {
+      type: String,
     },
     stock: {
-      type: Number,
-      required: true,
+      type: String,
     },
     enable: {
       type: Boolean,
+      default: true,
     },
     image: {
+      public_id: String,
+      secure_url: String,
+    },
+    amount: {
       type: String,
+      require: true,
     },
   },
   {

@@ -28,7 +28,7 @@ function LoginForm({ onClose }) {
   return (
     <div
       id="login"
-      className=" absolute bg-gray-200 top-20 right-0 lg:h-[100%] ease-in duration-500 overflow-auto "
+      className=" absolute z-[100] bg-gray-200 top-20 right-0 lg:h-[100%] ease-in duration-500 overflow-auto "
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
